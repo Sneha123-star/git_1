@@ -14,9 +14,6 @@ on:
       token:
         required: true
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,7 +24,6 @@ jobs:
     name: Pass input and secrets to my-action
     runs-on: window-latest
     steps:
-      - uses: ./.github/workflows/readme
-        with:
-          username: ${{ inputs.username }}
-          token: ${{ secrets.token }}
+    - name: Print To Console
+      run: |
+        Write-Output "Hello"
