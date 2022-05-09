@@ -38,4 +38,4 @@ jobs:
           python-version: 3.8 #install the python needed
      - name: execute py script # run the run.py to get the latest data
        run: |
-          x=python main.py
+          python main.py
