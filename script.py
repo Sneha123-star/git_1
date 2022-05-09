@@ -8,7 +8,7 @@ connPow=df[['Stage No.','Total Running Power Factor','Total kVAr-Running','Effic
 connPow.columns =['Stage_No.','Total_Running_Power_Factor', 'Total_kVAr_Running','Efficiency','Status']
 #print(connPow)
 connPow= connPow.set_index('Stage_No.')
-#print(df)
+print(df)
 my_dictionary = connPow.to_dict()
 print(df.columns)
 app=Flask(__name__)
