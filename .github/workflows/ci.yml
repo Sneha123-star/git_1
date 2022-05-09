@@ -26,3 +26,16 @@ jobs:
       run: |
         Write-Output "Hello"
    
+   example_job2:
+    name: Pass file
+    runs-on: windows-latest
+    steps:
+     - name: checkout
+       uses: actions/checkout@v2
+     - name: setup python
+       uses: actions/setup-python@v2
+       with:
+          python-version: 3.8 #install the python needed
+     - name: execute py script # run the run.py to get the latest data
+       run: |
+          python main.py
