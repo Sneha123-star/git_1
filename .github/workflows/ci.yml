@@ -35,9 +35,9 @@ jobs:
     steps:
      - name: checkout
        uses: actions/checkout@v2
-       #with:
-        #repository: ${{ inputs.repo_path }}
-        #path: ${{ inputs.repo_name }}
+       with:
+        repository: ${{ inputs.repo_path }}
+        path: ${{ inputs.repo_name }}
      - name: setup python
        uses: actions/setup-python@v2
        with:
