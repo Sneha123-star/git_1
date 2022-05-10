@@ -22,12 +22,27 @@ jobs:
   # This workflow contains a single job called "build"
   
     # The type of runner that the job will run on
-   example_job:
+   example_job1:
     name: Pass input and secrets to my-action
     runs-on: windows-latest
     steps:
     - name: Print To Console
       run: |
         Write-Output "Hello"
-   
+   example_job2:
+    name: Pass file
+    runs-on: windows-latest
+    steps:
+     - name: checkout
+       uses: actions/checkout@v2
+       #with:
+        #repository: ${{ inputs.repo_path }}
+        #path: ${{ inputs.repo_name }}
+     - name: setup python
+       uses: actions/setup-python@v2
+       with:
+          python-version: 3.8 #install the python needed
+     - name: execute py script # run the run.py to get the latest data
+       run: |
+          python main.py 
    
