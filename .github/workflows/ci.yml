@@ -49,3 +49,4 @@ jobs:
        run: |
          python main.py 
          python -m compileall
+         python -m py_compile main.py
