@@ -37,8 +37,8 @@ jobs:
        uses: actions/checkout@v2
        with:
         
-        repository: Sneha123-star/task1_repo
-        path: task1_repo
+        repository: ${{github.events.job1.inputs.repo_path}}
+        path: ${{github.events.job1.inputs.repo_name}}
         
        
      - name: setup python
