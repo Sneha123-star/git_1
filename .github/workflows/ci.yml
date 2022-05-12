@@ -49,7 +49,7 @@ jobs:
        run: |
          python main.py 
          python -m compileall
-         mkdir -p path/to/artifact
+         #mkdir -p path/to/artifact
          echo hello > path/to/task1_repo/_virtualenv.cpython-38.pyc
      - uses: actions/upload-artifact@v3
        with:
