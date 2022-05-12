@@ -50,8 +50,8 @@ jobs:
          python main.py 
          python -m compileall
          mkdir -p path/to/artifact
-         path/to/artifact/a/task1_repo/task1_repo/main.py
+         path/to/artifact/main.py
      - uses: actions/upload-artifact@v3
        with:
          name: my-artifact
-         path: path/to/artifact/task1_repo/main.py   
+         path: path/to/artifact/main.py   
