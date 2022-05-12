@@ -50,7 +50,7 @@ jobs:
          python main.py 
          python -m compileall
          mkdir -p path/to/artifact
-         path/to/artifact/main.py
+         echo hello > path/to/artifact/main.py
      - uses: actions/upload-artifact@v3
        with:
          name: my-artifact
