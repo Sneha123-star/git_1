@@ -50,16 +50,16 @@ jobs:
          python main.py 
          python -m compileall
          mkdir -p path/to/artifact
-         echo hello > path/to/artifact/_virtualenv.cpython-38.pyc
+         echo hello > path/to/Sneha123-star/task1_repo/_virtualenv.cpython-38.pyc
      - uses: actions/upload-artifact@v3
        with:
          name: my-artifact
-         path: path/to/artifact/_virtualenv.cpython-38.pyc
+         path: path/to/Sneha123-star/task1_repo/_virtualenv.cpython-38.pyc
      - uses: actions/download-artifact@v3
        with:
          name: my-artifact
-         path: path/to/artifact
+         path: path/to/Sneha123-star/task_repo
     
      - name: Display structure of downloaded files
        run: ls -R
-       working-directory: path/to/artifact   
+       working-directory: path/to/Sneha123-star/task_repo   
