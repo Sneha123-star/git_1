@@ -49,11 +49,17 @@ jobs:
        run: |
          python main.py 
          python -m compileall
-     - name: checkout1  
-       uses: actions/checkout@v2  
          mkdir -p path/to/artifact
          echo hello > path/to/artifact/main.py
      - uses: actions/upload-artifact@v3
        with:
          name: my-artifact
-         path: path/to/artifact/main.py   
+         path: path/to/artifact/main.py
+     - uses: actions/download-artifact@v3
+       with:
+         name: my-artifact
+         path: path/to/artifact
+    
+     - name: Display structure of downloaded files
+       run: ls -R
+       working-directory: path/to/artifact   
